@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independence Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/736x/ce/3b/04/ce3b0460a443a445cb88db2995f281c4.jpg');
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        h2 {
+            display: flex;
+            align-items: center;
+        }
+        h2 img {
+            margin-right: 10px;
+        }
+        p {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .flag-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .flag-container img {
+            max-width: 30%;
+            height: auto;
+            display: inline-block;
+        }
+        .flag-container #flag-images img {
+            width: 20%;
+            height: auto;
+            display: inline-block;
+        }
+        .faq-container {
+            margin: 40px 0;
+        }
+        .faq-container h3 {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .faq-container p {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+        .flag-button, .anthem-button {
+            display: inline-block;
+            background-color: orange;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .anthem-button {
+            display: none; /* Initially hidden */
+            background-color: red;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        .video-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .video-container iframe {
+            width: 80%; /* Smaller width for the video */
+            height: 400px; /* Smaller height for the video */
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+        .more-faqs {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Independence Day</h1>
+    
+    <h2>History of Independence Day</h2>
+    <p>Independence Day, celebrated annually on August 15th, marks a significant milestone in the history of India. It commemorates the day in 1947 when India finally achieved freedom from British colonial rule after nearly 200 years of struggle. 
+The history of Independence Day is deeply intertwined with the broader struggle for freedom, which was characterized by widespread nationalistic movements, civil disobedience, and non-violent resistance led by prominent leaders such as Mahatma Gandhi, Jawaharlal Nehru, Sardar Vallabhbhai Patel, and many others. The Indian independence movement began in the late 19th century with the formation of the Indian National Congress in 1885, which played a pivotal role in rallying the Indian masses against the injustices of British rule. 
+Over the decades, numerous movements like the Swadeshi Movement, the Non-Cooperation Movement, the Civil Disobedience Movement, and the Quit India Movement gained momentum, uniting people from various regions, religions, and backgrounds in their quest for self-rule. 
+The British government, under pressure from these sustained campaigns and global changes following World War II, finally decided to grant independence to India. On the midnight of August 14-15, 1947, India's first Prime Minister, Jawaharlal Nehru, delivered his iconic "Tryst with Destiny" speech, heralding a new era of freedom and hope for the nation. 
+However, this victory was bittersweet, as it also led to the Partition of India and Pakistan, resulting in widespread communal violence and mass migrations. Despite these challenges, Independence Day remains a powerful symbol of the resilience, unity, and determination of the Indian people.
+ Every year, the day is marked by flag-hoisting ceremonies, cultural programs, and patriotic displays across the country, with the main event taking place at the Red Fort in Delhi, where the Prime Minister addresses the nation.
+ The history of Independence Day is not just about the end of colonial rule, but also about the enduring spirit of freedom, democracy, and the ongoing efforts to build a just and equitable society.</p>
+<img src="https://m.economictimes.com/thumb/msid-102743131,width-1600,height-900,resizemode-4,imgsize-40348/the-day-is-marked-with-an-array-of-messages-that-encapsulate-patriotism.jpg" style="width: 300px; height: 170px;">
+
+    <div class="flag-container">
+        <button class="flag-button" onclick="hostFlag()">Host Flag</button>
+
+        <img id="army-image" src="https://www.ilearnias.com/wp-content/uploads/2024/01/indian-army-35e82zy24xfm0pgi.jpg" alt="Indian Army" style="width: 30%;">
+        <div id="flag-images" style="display: none;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_wJj6BEQS19GGuBtUeR7Fd3lsI9WJ1OKhcw&usqp=CAU" alt="Flag Image 1">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQZgYnhcurR7MAbqUobj-wSxfNA3keTJHm3LUzv63nPkQfWyMtG" alt="Flag Image 2" style="margin-left: 10%;">
+        </div>
+    </div>
+    
+    <div class="video-container">
+        <h2>Video of India's Independence</h2>
+        <iframe src="https://www.youtube.com/embed/-sw19FyG2oY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <h2>Information</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">Who invaded India and why? <span>+</span></h3>
+            <p>The British🇬🇧 East India Company invaded India primarily for trade, and over time, they gained control of large parts of the country.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">When did India become a Republic? <span>+</span></h3>
+            <p>India became a Republic on January 26, 1950.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">Who was the first Prime Minister of India? <span>+</span></h3>
+            <p>Jawaharlal Nehru was the first Prime Minister of India.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">What was the Quit India Movement? <span>+</span></h3>
+            <p>The Quit India Movement was a mass protest demanding an end to British Rule in India, initiated by Mahatma Gandhi in 1942.</p>
+        </div>
+        <div class="faq-item">
+            <h3 onclick="toggleFaq(this)">What is the significance of August 15? <span>+</span></h3>
+            <p>August 15 is celebrated as India's Independence Day, marking the end of British rule in 1947.</p>
+        </div>
+        <!-- Hidden FAQ items -->
+        <div class="more-faqs">
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Who wrote the Indian National Anthem? <span>+</span></h3>
+                <p>Rabindranath Tagore wrote the Indian National Anthem "Jana Gana Mana".</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What is the capital of India? <span>+</span></h3>
+                <p>The capital of India is New Delhi.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What does the Ashoka Chakra on the Indian flag represent? <span>+</span></h3>
+                <p>The Ashoka Chakra represents the eternal wheel of law and dharma.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">How many states are there in India? <span>+</span></h3>
+                <p>There are 28 states and 8 Union territories in India.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What was the first war of Indian Independence? <span>+</span></h3>
+                <p>The First War of Indian Independence was in 1857, also known as the Sepoy Mutiny.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Who was the first President of India? <span>+</span></h3>
+                <p>Dr. Rajendra Prasad was the first President of India.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What is the national flower of India? <span>+</span></h3>
+                <p>The national flower of India is the Lotus.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What is the national bird of India? <span>+</span></h3>
+                <p>The national bird of India is the Peacock.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Who was the father of the Indian Constitution? <span>+</span></h3>
+                <p>Dr. B.R. Ambedkar is regarded as the father of the Indian Constitution.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What is the official language of India? <span>+</span></h3>
+                <p>The official language of India is Hindi, with English also widely used for official purposes.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What is the national animal of India? <span>+</span></h3>
+                <p>The national animal of India is the Bengal Tiger.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What is the national song of India? <span>+</span></h3>
+                <p>The national song of India is "Vande Mataram".</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">When did the Indian Constitution come into effect? <span>+</span></h3>
+                <p>The Indian Constitution came into effect on January 26, 1950.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Which is the longest river in India? <span>+</span></h3>
+                <p>The Ganges River is the longest river in India.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Who was the first Indian woman to win an Olympic medal? <span>+</span></h3>
+                <p>Karnam Malleswari was the first Indian woman to win an Olympic medal.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Which city is known as the Pink City? <span>+</span></h3>
+                <p>Jaipur is known as the Pink City.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What is the national tree of India? <span>+</span></h3>
+                <p>The national tree of India is the Banyan tree.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Who is known as the Iron Man of India? <span>+</span></h3>
+                <p>Sardar Vallabhbhai Patel is known as the Iron Man of India.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Which state is known as the Land of Five Rivers? <span>+</span></h3>
+                <p>Punjab is known as the Land of Five Rivers.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">What is the national fruit of India? <span>+</span></h3>
+                <p>The national fruit of India is the Mango.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Who founded the Indian National Congress? <span>+</span></h3>
+                <p>The Indian National Congress was founded by A.O. Hume in 1885.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Which state is known as the Spice Garden of India? <span>+</span></h3>
+                <p>Kerala is known as the Spice Garden of India.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Who was the first Indian to win a Nobel Prize? <span>+</span></h3>
+                <p>Rabindranath Tagore was the first Indian to win a Nobel Prize, for Literature in 1913.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Which state is known as the Land of Rising Sun in India? <span>+</span></h3>
+                <p>Arunachal Pradesh is known as the Land of Rising Sun in India.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Who was the first Indian astronaut to go to space? <span>+</span></h3>
+                <p>Rakesh Sharma was the first Indian astronaut to go to space in 1984.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Which state is known as the Land of Temples in India? <span>+</span></h3>
+                <p>Tamil Nadu is known as the Land of Temples in India.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFaq(this)">Which city is known as the Silicon Valley of India? <span>+</span></h3>
+                <p>Bengaluru is known as the Silicon Valley of India.</p>
+            </div>
+        </div>
+        <!-- Show More/Less button -->
+        <button class="anthem-button" onclick="toggleFaqs()">Show More FAQs</button>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            var content = element.nextElementSibling;
+            var span = element.querySelector("span");
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                span.textContent = "+";
+            } else {
+                content.style.display = "block";
+                span.textContent = "-";
+            }
+        }
+
+        function toggleFaqs() {
+            var moreFaqs = document.querySelector('.more-faqs');
+            var button = document.querySelector('.anthem-button');
+
+            if (moreFaqs.style.display === "block") {
+                moreFaqs.style.display = "none";
+                button.textContent = "Show More FAQs";
+            } else {
+                moreFaqs.style.display = "block";
+                button.textContent = "Show Less FAQs";
+            }
+        }
+
+        function hostFlag() {
+            var image = document.getElementById('army-image');
+            var flagImages = document.getElementById('flag-images');
+
+            image.style.display = 'none';
+            flagImages.style.display = 'block';
+
+            var anthemButton = document.querySelector('.anthem-button');
+            anthemButton.style.display = 'inline-block'; // Show the 'Show More FAQs' button after the flag is hosted
+
+            // Start playing the background music
+            var audio = new Audio('https://1drv.ms/u/c/3347519ab954aea1/ETXhV9SvgAtJjWui4NXhg1IBm9ql2X8q-n1BHQj33uuyLw?e=Xiegtm');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
